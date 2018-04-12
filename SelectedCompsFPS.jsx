@@ -3,11 +3,11 @@ app.beginUndoGroup("Selected Comps FPS");
 
 //var newDuration = prompt ("Enter New Duration", 10, "title");
 var fps = prompt("Enter new frame rate", 24);
-for (i = 1; i < app.project.items.length+1; i++)
+for (var i = 1; i < app.project.items.length+1; i++)
 {
-    curItem = app.project.items[i];
-    if (curItem instanceof CompItem && curItem.selected)
+    var _item = app.project.items[i];
+    if (_item instanceof CompItem && _item.selected)
     {
-      curItem.frameRate = fps;
+      _item.frameRate = fps;
         }
     }
